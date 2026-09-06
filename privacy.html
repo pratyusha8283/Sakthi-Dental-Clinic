@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Sakthi Dental Clinic</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Privacy Policy Specific Modern Layout */
+    .policy-wrapper {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    /* Sticky Sidebar Navigation */
+    .policy-nav {
+      position: sticky;
+      top: 90px;
+      height: fit-content;
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .policy-nav h4 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .policy-nav ul {
+      list-style: none;
+    }
+
+    .policy-nav li {
+      margin-bottom: 8px;
+    }
+
+    .policy-nav a {
+      text-decoration: none;
+      color: var(--text-body);
+      font-size: 0.9rem;
+      display: block;
+      padding: 6px 10px;
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+    }
+
+    .policy-nav a:hover {
+      background-color: #f0f9ff;
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    /* Policy Summary Callout Box */
+    .summary-box {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-left: 4px solid var(--primary-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .summary-box h3 {
+      color: var(--primary-hover);
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .summary-item {
+      background: var(--bg-white);
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    /* Policy Section Cards */
+    .policy-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--card-shadow);
+      scroll-margin-top: 100px; /* Offset for smooth scrolling */
+    }
+
+    .policy-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 12px;
+    }
+
+    .section-badge {
+      background-color: #e0f2fe;
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .policy-card h3 {
+      color: var(--text-dark);
+      font-size: 1.3rem;
+    }
+
+    .policy-card p, .policy-card li {
+      color: var(--text-body);
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+
+    .policy-card ul {
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 12px;
+    }
+
+    .policy-card li {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive Adaptation */
+    @media (max-width: 900px) {
+      .policy-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .policy-nav {
+        display: none; /* Hide sidebar jump links on small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+ <header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="assets/SDC Logo.png" alt="Sakthi Dental Clinic Logo" class="nav-logo">
+    </a>
+
+    <!-- Hamburger Toggle Button (Triple Bars) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <!-- Header Section -->
+    <div class="section-header">
+      <h2>Privacy Policy</h2>
+      <p>How Sakthi Dental Clinic collects, uses, and safeguards your personal and medical information</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;"><strong>Effective Date:</strong> September 2026 | <strong>Version:</strong> 2.0</p>
+    </div>
+
+    <!-- Quick Highlights Box -->
+    <div class="summary-box">
+      <h3>🛡️ Privacy at a Glance</h3>
+      <p style="font-size: 0.95rem; color: var(--text-body);">Your trust is our highest priority. Here is a quick summary of how we handle your data:</p>
+      <div class="summary-grid">
+        <div class="summary-item">🔒 We never sell or rent your data</div>
+        <div class="summary-item">🩺 Medical confidentiality maintained</div>
+        <div class="summary-item">📑 You control your submission</div>
+        <div class="summary-item">⚡ Secure data processing</div>
+      </div>
+    </div>
+
+    <div class="policy-wrapper">
+      <!-- Sticky Navigation Sidebar -->
+      <aside class="policy-nav">
+        <h4>Privacy Policy</h4>
+        <ul>
+          <li><a href="#section-1">1. Information We Collect</a></li>
+          <li><a href="#section-2">2. Use of Cookies</a></li>
+          <li><a href="#section-3">3. How We Use Data</a></li>
+          <li><a href="#section-4">4. Data Security</a></li>
+          <li><a href="#section-5">5. Information Sharing</a></li>
+          <li><a href="#section-6">6. Children's Privacy</a></li>
+          <li><a href="#section-7">7. Policy Updates</a></li>
+          <li><a href="#section-8">8. Terms Acceptance</a></li>
+          <li><a href="#section-9">9. Contact Us</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Policy Cards -->
+      <div class="policy-content">
+
+        <!-- 1. Information We Collect -->
+        <article class="policy-card" id="section-1" >
+          <div class="policy-card-header">
+            <span class="section-badge">01</span>
+            <h3>Information We Collect</h3>
+          </div>
+          <p>We may collect personal identification information from users in several ways, including when users visit our site, fill out form requests (such as scheduling appointments or general inquiries), and engage with clinic resources.</p>
+          
+          <p style="margin-top: 12px;"><strong>Personal Information Provided Voluntarily:</strong></p>
+          <ul>
+            <li>Full Name</li>
+            <li>Email address</li>
+            <li>Phone number & Appointment Preferences</li>
+          </ul>
+          <p>Users can visit our site anonymously. We only collect personal data when it is voluntarily submitted. Refusing to provide personal details may limit access to specific website features or online appointment booking.</p>
+
+          <p style="margin-top: 12px;"><strong>Non-Personal Technical Data:</strong></p>
+          <ul>
+            <li>Browser type and version</li>
+            <li>Device type (Mobile, Tablet, Desktop)</li>
+            <li>Operating system and ISP information</li>
+          </ul>
+        </article>
+
+        <!-- 2. Cookies -->
+        <article class="policy-card" id="section-2">
+          <div class="policy-card-header">
+            <span class="section-badge">02</span>
+            <h3>Use of Cookies</h3>
+          </div>
+          <p>Our website uses "cookies" to enhance visitor browsing experience. Cookies are small data files stored on your device that help us analyze web traffic, remember user preferences, and optimize site responsiveness.</p>
+          <p style="margin-top: 10px;">You can set your web browser to refuse cookies or alert you when cookies are being sent. Note that disabling cookies may cause some sections of the website to function with limited interactivity.</p>
+        </article>
+
+        <!-- 3. How We Use Data -->
+        <article class="policy-card" id="section-3">
+          <div class="policy-card-header">
+            <span class="section-badge">03</span>
+            <h3>How We Use Your Information</h3>
+          </div>
+          <p>Sakthi Dental Clinic uses collected information for legitimate clinical and organizational purposes:</p>
+          <ul>
+            <li><strong>To Manage Appointments & Inquiries:</strong> Direct communication regarding consultation schedules, treatments, and follow-ups.</li>
+            <li><strong>To Improve Patient Service:</strong> Feedback helps us respond faster to patient requests and emergency support needs.</li>
+            <li><strong>To Optimize Website Functionality:</strong> Monitoring general user interaction to enhance site performance and accessibility.</li>
+            <li><strong>Email & SMS Updates:</strong> Sending confirmation messages, reminders, or response letters regarding your dental inquiries.</li>
+          </ul>
+        </article>
+
+        <!-- 4. Data Security -->
+        <article class="policy-card" id="section-4">
+          <div class="policy-card-header">
+            <span class="section-badge">04</span>
+            <h3>Data Security Practices</h3>
+          </div>
+          <p>We implement strict administrative, technical, and physical security procedures during data collection, storage, and processing. This protects your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+        </article>
+
+        <!-- 5. Information Sharing -->
+        <article class="policy-card" id="section-5">
+          <div class="policy-card-header">
+            <span class="section-badge">05</span>
+            <h3>Information Sharing & Disclosure</h3>
+          </div>
+          <p><strong>We do not sell, trade, or rent personal identification information to third parties under any circumstances.</strong></p>
+          <p style="margin-top: 10px;">We may share generic, aggregated demographic information (not linked to any individual identity) with trusted analytics partners solely for the purpose of maintaining website quality and performance.</p>
+        </article>
+
+        <!-- 6. Children's Privacy -->
+        <article class="policy-card" id="section-6">
+          <div class="policy-card-header">
+            <span class="section-badge">06</span>
+            <h3>Children's Online Privacy (COPPA)</h3>
+          </div>
+          <p>In compliance with international standards and COPPA regulations, our website does not knowingly collect personal data from children under 13 years of age. Pediatric consultations must be arranged directly by a parent or legal guardian.</p>
+        </article>
+
+        <!-- 7. Policy Updates -->
+        <article class="policy-card" id="section-7">
+          <div class="policy-card-header">
+            <span class="section-badge">07</span>
+            <h3>Changes to This Policy</h3>
+          </div>
+          <p>Sakthi Dental Clinic reserves the right to update this Privacy Policy periodically. Whenever changes are made, the revised date at the top of this page will be updated. We encourage patients to review this page occasionally to stay informed.</p>
+        </article>
+
+        <!-- 8. Acceptance of Terms -->
+        <article class="policy-card" id="section-8">
+          <div class="policy-card-header">
+            <span class="section-badge">08</span>
+            <h3>Acceptance of Terms</h3>
+          </div>
+          <p>By browsing and utilizing this website, you signify your acceptance of this policy. If you do not agree to this Privacy Policy, please discontinue site usage. Continued use following posted updates constitutes acceptance of those changes.</p>
+        </article>
+
+        <!-- 9. Contact Us -->
+        <article class="policy-card" id="section-9">
+          <div class="policy-card-header">
+            <span class="section-badge">09</span>
+            <h3>Contacting Our Privacy Officer</h3>
+          </div>
+          <p>If you have questions regarding this Privacy Policy, data removal requests, or site practices, please reach out to our administration:</p>
+          
+          <div style="background-color: var(--bg-light); border: 1px solid var(--border-color); padding: 20px; border-radius: var(--radius-md); margin-top: 16px;">
+            <p style="margin-bottom: 8px;"><strong>Sakthi Dental Clinic</strong></p>
+            <p style="margin-bottom: 6px;">📍 <strong>Address:</strong> B2/8, SBM Layout, Anthivadi, Hosur, Tamil Nadu 635109, India</p>
+            <p style="margin-bottom: 6px;">📧 <strong>Email:</strong> <a href="mailto:info@sakthidentalclinic.in" style="color: var(--primary-color); text-decoration: none;">info@sakthidentalclinic.in</a></p>
+            <p>📞 <strong>Phone:</strong> <a href="tel:+919862890897" style="color: var(--primary-color); text-decoration: none;">+91 9862890897</a> / <a href="tel:+919363298118" style="color: var(--primary-color); text-decoration: none;">+91 9363298118</a></p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col" style="text-align: left;">
+        <img src="assets/SDC Logo.png" alt="Sakthi Dental Clinic Logo" class="footer-logo">
+        <p>Specialized Dental Care for Women, Children & Families.</p>
+        <p style="margin-top: 10px;"><strong>Hours:</strong> Sunday to Saturday: 9am to 7pm</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="treatments.html">Treatments</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Key Treatments</h4>
+        <ul>
+          <li><a href="treatments.html">Tooth Extraction</a></li>
+          <li><a href="treatments.html">Artificial Complete Denture</a></li>
+          <li><a href="treatments.html">Tooth Filling</a></li>
+          <li><a href="treatments.html">Teeth Whitening</a></li>
+          <li><a href="treatments.html">Orthodontic Treatment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sakthi Dental Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

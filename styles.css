@@ -1,0 +1,663 @@
+/* ==========================================================================
+   Global Variables & Base Styles
+   ========================================================================== */
+:root {
+  --primary-color: #0284c7;        /* Medical Blue Accent */
+  --primary-hover: #0369a1;
+  --secondary-color: #ec4899;      /* Rose Accent */
+  --text-dark: #0f172a;            /* Main Dark Heading Text */
+  --text-body: #334155;            /* Body Text */
+  --text-muted: #64748b;           /* Muted Text */
+  --bg-light: #f8fafc;             /* Light Page/Card Background */
+  --bg-white: #ffffff;
+  --border-color: #e2e8f0;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+header {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Navigation Logo Sizing */
+.nav-logo {
+  max-height: 32px; /* Reduce this number (e.g., 28px, 30px) to make it smaller */
+  width: auto;
+  display: block;
+}
+/* Footer Logo Sizing */
+.footer-logo {
+  max-width: 100px; /* Adjust width as needed */
+  height: auto;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-body);
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--primary-color);
+  background-color: #f0f9ff;
+}
+
+/* ==========================================================================
+   Layout & Container
+   ========================================================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  flex: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Hero Banner / Featured Sections
+   ========================================================================== */
+.hero-banner {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: 32px;
+  box-shadow: var(--card-shadow);
+}
+
+/* ==========================================================================
+   Grid Systems & Cards (Treatments, Amenities, Team)
+   ========================================================================== */
+.services-grid,
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.card,
+.feature-card,
+.content-box {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--hover-shadow);
+}
+
+.card img,
+.feature-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body,
+.feature-card {
+  padding: 24px;
+}
+
+.card-tag {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.card h3,
+.feature-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.card p,
+.feature-card p {
+  color: var(--text-body);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+/* Content Box (About, Privacy & Form Containers) */
+.content-box {
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.content-box p {
+  margin-bottom: 16px;
+}
+
+.content-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Buttons & Form Controls
+   ========================================================================== */
+.btn-primary{
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+/* Container to force dead-center alignment on its line */
+.center-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 32px 0;
+  text-align: center;
+}
+
+/* Ensure the button itself renders as a centered block */
+.center-btn-wrapper .btn-primary {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: 48px 24px 24px 24px;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
+  background-color: #1e293b;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ==========================================================================
+/* Navigation Container Positioning */
+header {
+  position: relative;
+  z-index: 9999; /* Keeps header above all hero content */
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  padding: 8px 12px;
+  z-index: 10000; /* Ensures button is clickable */
+  position: relative;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block !important;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    width: 220px;
+    background-color: var(--bg-white, #ffffff);
+    border: 1px solid var(--border-color, #cbd5e1);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 12px 0;
+    z-index: 10000;
+  }
+
+  .navbar.nav-active {
+    display: flex !important;
+  }
+
+  .navbar a {
+    padding: 12px 20px;
+    width: 100%;
+    text-align: left;
+    color: var(--text-dark, #1e293b);
+  }
+}
+
+/* ==========================================================================
+   Accordion FAQ / Treatments Styling
+   ========================================================================== */
+
+/* Layout inside expanded FAQ Answer Panel */
+.faq-content-wrapper {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding-top: 12px;
+}
+
+/* Treatment Image inside expanded Accordion */
+.faq-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.faq-text-content p {
+  color: var(--text-body);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* Responsive Adaptation for Small Screens */
+@media (max-width: 600px) {
+  .faq-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .faq-image {
+    height: 180px;
+  }
+}
+/* ==========================================================================
+   Comprehensive Responsive Adaptations
+   ========================================================================== */
+
+/* 1. Tablet & Medium Screens (max-width: 900px) */
+@media (max-width: 900px) {
+  /* Privacy Policy Page Layout Adjustments */
+  .policy-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .policy-nav {
+    display: none !important; /* Hide sticky sidebar on smaller screens */
+  }
+
+  /* About Us Doctor Profile Layout */
+  .doctor-profile-card {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 20px !important;
+    padding: 24px !important;
+  }
+
+  .doctor-image {
+    height: 280px !important;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* 2. Mobile Screens & Handheld Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Header & Navigation Drawer */
+  .nav-container {
+    padding: 10px 16px;
+  }
+
+  .nav-toggle {
+    display: block !important; /* Show triple-bar hamburger button */
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    width: 240px;
+    background-color: var(--bg-white, #ffffff);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: var(--radius-md, 8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 12px 0;
+    z-index: 10000;
+  }
+
+  .navbar a {
+    width: 100%;
+    padding: 12px 20px;
+    text-align: left;
+    border-radius: 0;
+  }
+
+  /* General Grid Adjustments */
+  .services-grid,
+  .specialists-grid,
+  .features-grid,
+  .stats-container,
+  .summary-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Section Typography Adjustments */
+  .section-header h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .about-hero h1 {
+    font-size: 1.75rem !important;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem !important;
+  }
+
+  /* Footer Adjustments */
+  .footer-content {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  .footer-col {
+    text-align: center !important;
+  }
+
+  .footer-logo {
+    margin: 0 auto 12px auto;
+  }
+}
+
+/* 3. Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .card-body {
+    padding: 16px !important;
+  }
+
+  .policy-card {
+    padding: 20px 16px !important;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Contact Form Alert Boxes */
+.alert-box {
+  padding: 14px 18px;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-alert {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.error-alert {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Universal Form Input and Select Styling */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-dark, #0f172a);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-body, #334155);
+  background-color: var(--bg-white, #ffffff);
+  border: 1px solid var(--border-color, #cbd5e1);
+  border-radius: var(--radius-md, 8px);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  appearance: none; /* Uniform styling across browsers */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Custom dropdown arrow for standard select element */
+.form-group select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%3334155' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+/* Active focus ring matching input fields */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color, #0284c7);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+/* Navigation Links Universal Styling */
+.navbar a {
+  text-decoration: none;
+  color: var(--text-dark, #0f172a);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border-radius: var(--radius-md, 8px);
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+
+/* Hover Effect for ALL Navigation Items */
+.navbar a:hover {
+  color: var(--primary-color, #0284c7);
+  background-color: #f0f9ff;
+}
+
+/* Active Page Highlight Effect */
+.navbar a.active {
+  color: var(--primary-color, #0284c7) !important;
+  background-color: #e0f2fe !important;
+  font-weight: 600;
+}

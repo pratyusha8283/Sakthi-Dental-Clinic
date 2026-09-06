@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Sakthi Dental Clinic</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Specific Layout for Contact Page Two-Column Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .contact-info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+      background-color: #e0f2fe;
+      color: #0284c7;
+      padding: 12px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      min-height: 48px;
+    }
+
+    .contact-details h4 {
+      font-size: 1rem;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .contact-details p {
+      color: #475569;
+      line-height: 1.5;
+    }
+
+    /* Stack to single column on mobile screens */
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+ <!-- Header / Navigation -->
+ <header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="assets/SDC Logo.png" alt="Sakthi Dental Clinic Logo" class="nav-logo">
+    </a>
+
+    <!-- Hamburger Toggle Button (Triple Bars) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+
+  <main class="container">
+    <div class="section-header">
+      <h2>Get in Touch</h2>
+      <p>We are here to answer your questions and help you schedule your dental visit</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact Form (Left Side) -->
+      <div class="content-box">
+        <h3 style="color: #0f172a; margin-bottom: 20px; font-size: 1.5rem;">We would love to hear from you</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name <span style="color: #ef4444;">*</span></label>
+            <input type="text" id="name" required placeholder="Enter your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span style="color: #ef4444;">*</span></label>
+            <input type="email" id="email" required placeholder="example@domain.com">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number <span style="color: #ef4444;">*</span></label>
+            <input type="tel" id="phone" required placeholder="+91 XXXXX XXXXX">
+          </div>
+          <div class="form-group">
+            <label for="service">Required Treatment <span style="color: #ef4444;">*</span></label>
+            <select id="service" name="service" required>
+              <option value="disabled selected">Select a treatment...</option>
+              <option value="Teeth Cleaning & Scaling">Teeth Cleaning & Scaling</option>
+              <option value="Tooth Filling">Tooth Filling</option>
+              <option value="Tooth Extraction">Tooth Extraction</option>
+              <option value="Artificial Complete Denture">Artificial Complete Denture</option>
+              <option value="Dental Implants">Dental Implants</option>
+              <option value="Laser Dentistry">Laser Dentistry</option>
+              <option value="Root Canal Therapy">Root Canal Therapy</option>
+              <option value="Wisdom Tooth Extraction">Wisdom Tooth Extraction</option>
+              <option value="Fixed Partial Denture (Bridge)">Fixed Partial Denture (Bridge)</option>
+              <option value="Teeth Whitening (Bleaching)">Teeth Whitening (Bleaching)</option>
+              <option value="Veneers">Veneers</option>
+              <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+              <option value="Flap Surgery">Flap Surgery</option>
+              <option value="Orthodontic Braces">Orthodontic Braces</option>
+              <option value="Clear Aligners">Clear Aligners</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message / Request</label>
+            <textarea id="message" placeholder="How can we help you today?(Optional)"></textarea>
+          </div>
+
+          <div id="formResponse" style="margin-bottom: 16px;"></div>
+
+          <button type="submit" class="btn-primary" style="width: 100%;">Submit Appointment Request</button>
+        </form>
+      </div>
+
+      <!-- Clinic Contact Information (Right Side) -->
+      <div class="content-box">
+        <h3 style="color: #0f172a; margin-bottom: 24px; font-size: 1.5rem;">Reach us</h3>
+        <ul class="contact-info-list">
+          <!-- Address -->
+          <li class="contact-info-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4>Address</h4>
+              <p>B2/8, SBM Layout, Anthivadi, Hosur, Tamil Nadu 635109, India</p>
+            </div>
+          </li>
+
+          <!-- Email -->
+          <li class="contact-info-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p><a href="mailto:info@sakthidentalclinic.in" style="color: #0284c7; text-decoration: none;">info@sakthidentalclinic.in</a></p>
+            </div>
+          </li>
+
+          <!-- Phone -->
+          <li class="contact-info-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p><a href="tel:+919862890897" style="color: #0284c7; text-decoration: none;">+91 9862890897</a> / <a href="tel:+919363298118" style="color: #0284c7; text-decoration: none;">+91 9363298118</a></p>
+            </div>
+          </li>
+
+          <!-- Timings -->
+          <li class="contact-info-item">
+            <div class="contact-icon">⏰</div>
+            <div class="contact-details">
+              <h4>Timings</h4>
+              <p>Sunday to Saturday: <strong>9am to 7pm</strong></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <img src="assets/SDC Logo.png" alt="Sakthi Dental Clinic Logo" class="footer-logo">
+        <p>Specialized Dental Care for Women, Children & Families.</p>
+        <p style="margin-top: 10px;"><strong>Hours:</strong> Sunday to Saturday: 9am to 7pm</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="treatments.html">Treatments</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Key Treatments</h4>
+        <ul>
+          <li><a href="treatments.html">Tooth Extraction</a></li>
+          <li><a href="treatments.html">Artificial Complete Denture</a></li>
+          <li><a href="treatments.html">Tooth Filling</a></li>
+          <li><a href="treatments.html">Teeth Whitening</a></li>
+          <li><a href="treatments.html">Orthodontic Treatment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sakthi Dental Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Sakthi Dental Clinic</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* About Page Specific Styles */
+    .about-hero {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px 32px;
+      text-align: center;
+      margin-bottom: 40px;
+      border: 1px solid #bae6fd;
+    }
+
+    .about-hero h1 {
+      font-size: 2.2rem;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .about-hero p {
+      font-size: 1.1rem;
+      color: var(--text-body);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .doctor-profile-card {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 32px;
+      align-items: center;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 40px;
+    }
+
+    .doctor-image {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      box-shadow: var(--card-shadow);
+    }
+
+    .doctor-info h3 {
+      font-size: 1.6rem;
+      color: var(--primary-color);
+      margin-bottom: 4px;
+    }
+
+    .doctor-role {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--secondary-color);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .doctor-bio {
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .specialists-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .specialist-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+    }
+
+    .specialist-card h4 {
+      color: var(--text-dark);
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .specialist-card p {
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .doctor-profile-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .doctor-image {
+        height: 260px;
+        max-width: 260px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="assets/SDC Logo.png" alt="Sakthi Dental Clinic Logo" class="nav-logo">
+    </a>
+
+    <!-- Hamburger Toggle Button (Triple Bars) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+  <main class="container">
+    
+    <!-- Hero Banner Section -->
+    <section class="about-hero">
+      <h1>About Sakthi Dental Clinic</h1>
+      <p>Dedicated to delivering high-quality, compassionate, and personalized dental care for women, children, and families in Hosur.</p>
+    </section>
+
+    <!-- Clinic Key Metrics -->
+    <section class="stats-container">
+      <div class="stat-card">
+        <div class="stat-number">1+</div>
+        <div class="stat-label">Founder & Head Surgeon</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">8+</div>
+        <div class="stat-label">Visiting Specialists</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Advanced Dental Treatments</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">7 Days</div>
+        <div class="stat-label">Open All Week (9 AM - 7 PM)</div>
+      </div>
+    </section>
+
+    <!-- Founder Doctor Profile -->
+    <section>
+      <div class="section-header">
+        <h2>Leadership & Clinical Expertise</h2>
+        <p>Meet our leading dental professional driving patient care excellence</p>
+      </div>
+
+      <div class="doctor-profile-card">
+        <img src="assets/Dr. Anupriya.jpg" alt="Dr. Anupriya - Founder" class="doctor-image" onerror="this.src='https://via.placeholder.com/300x350?text=Dr.+Anupriya'">
+        <div class="doctor-info">
+          <h3>Dr. Anupriya</h3>
+          <span class="doctor-role">Founder & Chief Dental Surgeon</span>
+          <p class="doctor-bio">
+            Dr. Anupriya founded Sakthi Dental Clinic with a vision to provide world-class, painless, and accessible dental healthcare. Specializing in family dentistry, preventive care, and advanced oral procedures, she emphasizes building long-lasting patient relationships through trust and gentle care.
+          </p>
+          <p class="doctor-bio">
+            Under her leadership, the clinic has integrated modern technology such as LASER dentistry and clear aligners to ensure precision and patient comfort in every procedure.
+          </p>
+          <a href="contact.html" class="btn-primary" style="margin-top: 8px;">Book a Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Medical Team & Specialists -->
+    <!-- Medical Team & Specialists -->
+    <section>
+      <div class="section-header">
+        <h2>Our Medical Team & Specialists</h2>
+        <p>Meet our dedicated team of dental surgeons and visiting specialists</p>
+      </div>
+
+      <div class="specialists-grid">
+        <div class="specialist-card">
+          <h4>Dr. Anupriya</h4>
+          <p>Founder & Chief Dental Surgeon</p>
+        </div>
+        <div class="specialist-card">
+          <h4>Dr. Ananya Iyer</h4>
+          <p>Prosthodontist (Dentures & Crowns)</p>
+        </div>
+        <div class="specialist-card">
+          <h4>Dr. Meera Subramanian</h4>
+          <p>Endodontist (Root Canal Specialist)</p>
+        </div>
+        <div class="specialist-card">
+          <h4>Dr. Arvind kumar</h4>
+          <p>Dental Surgeon</p>
+        </div>
+        <div class="specialist-card">
+          <h4>Dr.Sneha N </h4>
+          <p>Orthodontist</p>
+        </div>
+        <div class="specialist-card">
+          <h4>Dr. Srinivas Rohit Ramanujan</h4>
+          <p>Implantologist</p>
+        </div>
+        <div class="specialist-card">
+          <h4>Dr. Balu</h4>
+          <p>Laser Surgeon</p>
+        </div>
+        <div class="specialist-card">
+          <h4>Dr. Vikram Raj Kishore</h4>
+          <p>Aligners Partners</p>
+        </div>
+        <div class="specialist-card">
+          <h4>Dr. Ajay Kumar</h4>
+          <p>Oral & Maxillofacial Surgeon</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section>
+      <div class="section-header">
+        <h2>Our Clinical Standards</h2>
+        <p>Principles that guide our daily practice</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card" style="text-align: center;">
+          <span style="font-size: 2rem; display: block; margin-bottom: 12px;">🛡️</span>
+          <h3>100% Sterilization</h3>
+          <p>Strict hygiene protocols and international sterilization standards for patient safety.</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <span style="font-size: 2rem; display: block; margin-bottom: 12px;">🩺</span>
+          <h3>Advanced Tech</h3>
+          <p>Equipped with LASER tools, digital X-rays, and modern equipment for painless treatments.</p>
+        </div>
+        <div class="feature-card" style="text-align: center;">
+          <span style="font-size: 2rem; display: block; margin-bottom: 12px;">🤝</span>
+          <h3>Transparent Care</h3>
+          <p>Clear treatment plans, upfront discussions, and zero hidden costs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="text-align: center; margin: 40px 0;">
+      <div class="content-box" style="background-color: #f0f9ff; border: 1px solid #bae6fd;">
+        <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 8px;">Ready for a healthier smile?</h3>
+        <p style="margin-bottom: 20px;">Visit Sakthi Dental Clinic for comprehensive care tailored to your family.</p>
+        <div class="center-btn-wrapper" style="margin: 0;">
+          <a href="contact.html" class="btn-primary">Fix an Appointment Today</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col" style="text-align: left;">
+        <img src="assets/SDC Logo.png" alt="Sakthi Dental Clinic Logo" class="footer-logo">
+        <p>Specialized Dental Care for Women, Children & Families.</p>
+        <p style="margin-top: 10px;"><strong>Hours:</strong> Sunday to Saturday: 9am to 7pm</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="treatments.html">Treatments</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Key Treatments</h4>
+        <ul>
+          <li><a href="treatments.html">Tooth Extraction</a></li>
+          <li><a href="treatments.html">Artificial Complete Denture</a></li>
+          <li><a href="treatments.html">Tooth Filling</a></li>
+          <li><a href="treatments.html">Teeth Whitening</a></li>
+          <li><a href="treatments.html">Orthodontic Treatment</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sakthi Dental Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
